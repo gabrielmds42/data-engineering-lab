@@ -1,0 +1,54 @@
+# =========================
+# 1. Ambiente Python e uv
+# =========================
+# O diretório do ambiente virtual criado pelo `uv`
+.venv/
+
+# Arquivos de cache gerados pelo Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# =========================
+# 2. Dados (Arquitetura Medalhão)
+# =========================
+# Ignora todo o conteúdo dentro da pasta data
+data/*
+
+# Exceção: Permite comitar os arquivos .gitkeep 
+# (Isso garante que a estrutura de pastas exista no GitHub, mesmo vazia)
+!data/**/.gitkeep
+
+# =========================
+# 3. Bancos de Dados / DuckDB
+# =========================
+# Ignora os arquivos binários e de log do DuckDB
+*.duckdb
+*.duckdb.wal
+*.db
+
+# =========================
+# 4. Tableau
+# =========================
+# Arquivos empacotados do Tableau (que contêm dados embutidos)
+*.twbx
+# Arquivos de extração de dados do Tableau
+*.hyper
+
+# =========================
+# 5. Segurança e Configurações Locais
+# =========================
+# Variáveis de ambiente e senhas
+.env
+.secrets/
+
+# =========================
+# 6. IDEs e SO
+# =========================
+# VS Code
+.vscode/
+*.code-workspace
+
+# Obsidian (Caso você coloque anotações na raiz do projeto)
+.obsidian/
